@@ -32,13 +32,28 @@
 		pinctrl-names = "default";
 		pinctrl-0 = <&pinctrl_gpio_led>;
 
-		status {
-			label = "status";
-            gpios = <&gpio3 20 GPIO_ACTIVE_HIGH>,
-                    <&gpio3 21 GPIO_ACTIVE_HIGH>,
-                    <&gpio3 22 GPIO_ACTIVE_HIGH>,
-                    <&gpio3 23 GPIO_ACTIVE_HIGH>;
-			default-state = "off";
+		orange {
+			lable = "orange";
+			default-state="none";
+			gpios = <&gpio3 20 GPIO_ACTIVE_HIGH>;
+		};
+
+		yellow {
+			lable = "yellow";
+			default-state="none";
+			gpios = <&gpio3 21 GPIO_ACTIVE_HIGH>;
+		};
+
+		green {
+			lable = "green";
+			default-state="none";
+			gpios = <&gpio3 22 GPIO_ACTIVE_HIGH>;
+		};
+
+		red {
+			lable = "red";
+			default-state="none";
+			gpios = <&gpio3 23 GPIO_ACTIVE_HIGH>;
 		};
 	};
 
@@ -353,10 +368,14 @@
 
 	pinctrl_gpio_led: gpioledgrp {
 		fsl,pins = <
-            MX8MM_IOMUXC_SAI5_RXC_GPIO3_IO20		0x19
-            MX8MM_IOMUXC_SAI5_RXD0_GPIO3_IO21		0x19
-            MX8MM_IOMUXC_SAI5_RXD1_GPIO3_IO22		0x19
-            MX8MM_IOMUXC_SAI5_RXD2_GPIO3_IO23		0x19
+			/* ORANGE_EN -- GPIO3_IO20 */
+			MX8MM_IOMUXC_SAI5_RXC_GPIO3_IO20		0x19
+			/* YELLOW_EN -- GPIO3_IO21 */
+			MX8MM_IOMUXC_SAI5_RXD0_GPIO3_IO21		0x19
+			/* GREEN_EN  -- GPIO3_IO22 */
+			MX8MM_IOMUXC_SAI5_RXD1_GPIO3_IO22		0x19
+			/* RED_EN    -- GPIO3_IO23 */
+			MX8MM_IOMUXC_SAI5_RXD2_GPIO3_IO23		0x19
 		>;
 	};
 
