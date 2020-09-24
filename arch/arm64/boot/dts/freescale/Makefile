@@ -180,3 +180,5 @@ dtb-$(CONFIG_ARCH_S32) += s32v234-evb.dtb \
 			  s32v234-sbc.dtb
 
 dtb-$(CONFIG_ARCH_MXC) += srg-mx8mm.dtb
+
+dtb-$(CONFIG_ARCH_MXC) += imx8mm-bse.dtb
