@@ -334,6 +334,13 @@
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_i2c3>;
 	status = "okay";
+
+	ds1339: rtc@68 {
+		compatible = "dallas,ds1339";
+		trickle-resistor-ohms = <250>;
+		reg = <0x68>;
+		status = "okay";
+	};
 };
 
 &iomuxc {
