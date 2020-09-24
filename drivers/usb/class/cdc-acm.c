@@ -1902,6 +1902,19 @@ static const struct usb_device_id acm_ids[] = {
 	.driver_info = IGNORE_DEVICE,
 	},
 
+	/* Exclude Maxlinear XR21V1410 */
+	{ USB_DEVICE(0x04e2, 0x1410),
+	.driver_info = IGNORE_DEVICE,
+	},
+	/* Exclude Maxlinear XR21V1412 */
+	{ USB_DEVICE(0x04e2, 0x1412),
+	.driver_info = IGNORE_DEVICE,
+	},
+	/* Exclude Maxlinear XR21V1414 */
+	{ USB_DEVICE(0x04e2, 0x1414),
+	.driver_info = IGNORE_DEVICE,
+	},
+
 	{ USB_DEVICE(0x1bc7, 0x0021), /* Telit 3G ACM only composition */
 	.driver_info = SEND_ZERO_PACKET,
 	},
